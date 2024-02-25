@@ -6,62 +6,61 @@ pip install pandas
 ## Spark Installation for linux (WSL)
 
 Prerequisites:
-Before installing PySpark, make sure that the following software is installed on your Linux machine:
-
-Python 3.6 or later
-Java Development Kit (JDK) 8 or later
-Apache Spark
+    Before installing PySpark, make sure that the following software is installed on your Linux machine:
+    
+    Python 3.6 or later
+    Java Development Kit (JDK) 8 or later
+    Apache Spark
 
 1. Install Java Development Kit (JDK)
 
-First, update the package index by running:
-
-sudo apt update
-
-Next, install the default JDK using the following command:
-
-sudo apt install default-jdk
-
-Verify the installation by checking the Java version:
-
-java -version
+    First, update the package index by running:
+    
+    sudo apt update
+    
+    Next, install the default JDK using the following command:
+    
+    sudo apt install default-jdk
+    
+    Verify the installation by checking the Java version:
+    
+    java -version
 
 2. Install Apache Spark
 
-Download the latest version of Apache Spark from the official website (https://spark.apache.org/downloads.html). At the time of writing, the latest version is Spark 3.2.0. Choose the package type as “Pre-built for Apache Hadoop 3.2 and later”.
-
-Use the following commands to download and extract the Spark archive:
-
-wget https://archive.apache.org/dist/spark/spark-3.2.0/spark-3.2.0-bin-hadoop3.2.tgz
-tar -xvzf spark-3.2.0-bin-hadoop3.2.tgz
-
-Move the extracted folder to the /opt directory
-
-sudo mv spark-3.2.0-bin-hadoop3.2 /opt/spark
+    Download the latest version of Apache Spark from the official website (https://spark.apache.org/downloads.html). At the time of writing, the latest version is Spark 3.2.0. Choose the package type as “Pre-built for Apache Hadoop 3.2 and later”.
+    
+    Use the following commands to download and extract the Spark archive:
+    
+    wget https://archive.apache.org/dist/spark/spark-3.2.0/spark-3.2.0-bin-hadoop3.2.tgz
+    tar -xvzf spark-3.2.0-bin-hadoop3.2.tgz
+    
+    Move the extracted folder to the /opt directory
+    
+    sudo mv spark-3.2.0-bin-hadoop3.2 /opt/spark
 
 3. Set Up Environment Variables
 
-Add the following lines to your ~/.bashrc file to set up the required environment variables:
-
-export SPARK_HOME=/opt/spark
-export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
-
-Source the updated ~/.bashrc file to apply the changes:
-
-source ~/.bashrc
-
+    Add the following lines to your ~/.bashrc file to set up the required environment variables:
+    
+    export SPARK_HOME=/opt/spark
+    export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
+    
+    Source the updated ~/.bashrc file to apply the changes:
+    
+    source ~/.bashrc
+    
 4. Install PySpark
 
-Install PySpark using pip:
-pip install pyspark
+    Install PySpark using pip:
+    pip install pyspark
 
 ## Spark Installation for Windows
 
 Prerequisites
-
-1. Python 3.6 or later: Download and install Python from the official website (https://www.python.org/downloads/). Make sure to add Python to your PATH during installation.
-
-2. Java 8: Download and install the Java Development Kit (JDK) 8 from Oracle’s website (https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html). Set the JAVA_HOME environment variable to the installation directory.
+    
+    1. Python 3.6 or later: Download and install Python from the official website (https://www.python.org/downloads/). Make sure to add Python to your PATH during installation.
+    2. Java 8: Download and install the Java Development Kit (JDK) 8 from Oracle’s website (https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html). Set the JAVA_HOME environment variable to the installation directory.
 
 1. Install Apache Spark
 
@@ -113,10 +112,12 @@ Prerequisites
 
     Replace {your_python_version} with your installed Python version, e.g., Python39 for Python 3.9.
 
-    d) Edit the ‘Path’ variable under ‘System variables’ by adding the following entries:
 
-        %HADOOP_HOME%\bin
 
-        %SPARK_HOME%\bin
+d) Edit the ‘Path’ variable under ‘System variables’ by adding the following entries:
 
-    e) Click ‘OK’ to save the changes.
+    %HADOOP_HOME%\bin
+
+    %SPARK_HOME%\bin
+
+e) Click ‘OK’ to save the changes.
