@@ -1,6 +1,7 @@
 from pyspark.sql import SparkSession
 
-spark = SparkSession.builder.appName("PySpark Test").getOrCreate()
+spark = SparkSession.builder.appName("PySpark Test") \
+    .master("local[*]").getOrCreate()
 
 data = [("Alice", 34), ("Bob", 45), ("Cathy", 29)]
 
