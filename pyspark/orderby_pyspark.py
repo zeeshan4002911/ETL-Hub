@@ -2,7 +2,7 @@ from pyspark.sql import SparkSession
 from pyspark.sql.functions import *
 from pyspark.sql.types import *
 
-spark = SparkSession.builder.appName("groupby and orderby pyspark") \
+spark = SparkSession.builder.appName("Sort and orderby pyspark") \
 .master("local[*]").getOrCreate()
 
 data = [
